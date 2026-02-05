@@ -294,7 +294,7 @@ By working with this project, you demonstrate:
 ## ✍️ **Author**
 
 **Your Name**
-BIBIN N BIJI, Senior RTL and DV Engineer, YArok14 Technologies Pvt Ltd.
+BIBIN N BIJI, Senior RTL and DV Engineer, Yarok14 Technologies Pvt Ltd.
 
 ---
 
