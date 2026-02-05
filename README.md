@@ -323,14 +323,6 @@ I’ll keep it simple first, then precise.
 
 # 🚦 **2) How PCIe works — big picture**
 
-![Image](https://www.oreilly.com/api/v2/epubs/urn%3Aorm%3Abook%3A0321156307/files/0321156307_ch11lev1sec4_image01.jpeg)
-
-![Image](https://upload.wikimedia.org/wikipedia/commons/1/1c/Example_PCI_Express_Topology.svg)
-
-![Image](https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3BjaS1leHByZXNzLWxhbmVzLmdpZiIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MjkwfX19)
-
-![Image](https://d1q3zw97enxzq2.cloudfront.net/images/diagram_z790.width-1000.format-webp.webp)
-
 Every PCIe link has **three layers**:
 
 ## **(A) Physical Layer (PHY) — the wires**
@@ -412,11 +404,6 @@ This is what your **tlp_gen.sv** and **tlp_decode.sv** represent.
 
 # 🔗 **3) How a PCIe link actually starts — LTSSM**
 
-![Image](https://media.licdn.com/dms/image/v2/D5622AQE72KJLu3i8Fg/feedshare-shrink_800/B56ZcgCSIAGQAw-/0/1748589159795?e=2147483647\&t=E54D128mPY9FE5cfbCTDfZr82jibOUDiOaAcsZlswC4\&v=beta)
-
-![Image](https://www.oreilly.com/api/v2/epubs/urn%3Aorm%3Abook%3A0321156307/files/0321156307_ch14lev1sec5_image01.jpeg)
-
-![Image](https://www.techpowerup.com/img/x5IOE9hplxgQwNWM.jpg)
 
 Before any data moves, the link goes through **LTSSM (Link Training and Status State Machine)**:
 
@@ -513,11 +500,6 @@ Step-by-step:
 
 # **1) Explaination in simple terms🎈 (Super simple)**
 
-![Image](https://www.verien.com/assets/images/pcie-block-diagram-438x346.jpg)
-
-![Image](https://images.openai.com/static-rsc-3/SQ2rcieqYEk1rhBehapyXVEtC7n9SmD0jkHU0gzmVIAGDUbGX8mKoXrzea1v_JUcEoF8c2mEWdtNk5VtySHBBZXxpqiKFSiCtUhYimLWPpI?purpose=fullsize\&v=1)
-
-![Image](https://www.keycdn.com/img/support/network-packets.png)
 
 **Imagine a super-fast toy highway inside your computer.**
 
@@ -550,9 +532,6 @@ Step-by-step:
 
 # **2) Explain like an NVIDIA interview (technical but crisp)**
 
-![Image](https://www.oreilly.com/api/v2/epubs/urn%3Aorm%3Abook%3A0321156307/files/0321156307_ch02lev1sec5_image01.jpeg)
-
-![Image](https://media.licdn.com/dms/image/v2/D5622AQE72KJLu3i8Fg/feedshare-shrink_800/B56ZcgCSIAGQAw-/0/1748589159795?e=2147483647\&t=E54D128mPY9FE5cfbCTDfZr82jibOUDiOaAcsZlswC4\&v=beta)
 
 ### Layered model
 
@@ -605,9 +584,6 @@ PCIe is organized into three main layers:
 
 # **3) Explain with timing diagrams (conceptual)**
 
-![Image](https://www.researchgate.net/publication/317112263/figure/fig3/AS%3A498071021604864%401495760793555/PCI-Express-DMA-Transmission-timing.png)
-
-![Image](https://www.researchgate.net/publication/267732984/figure/fig3/AS%3A601699932725251%401520467851365/a-NACK-method-for-RDATA-and-b-ACK-method-for-SDATA.png)
 
 ### (A) Link training (simplified)
 
@@ -696,9 +672,7 @@ T_{total} = T_{LTSSM} + T_{TL} + T_{DLL} + T_{PHY}
 
 # **5) Explain only the differences: Gen5 vs Gen6 (clean table)**
 
-![Image](https://www.researchgate.net/publication/372919795/figure/fig3/AS%3A11431281179517405%401691242943952/Comparison-of-NRZ-modulation-and-PAM4-modulation.png)
 
-![Image](https://pcisig.com/sites/default/files/files/Picture2_0.png)
 
 | Aspect          | **Gen5**           | **Gen6**                  | Why it matters                    |
 | --------------- | ------------------ | ------------------------- | --------------------------------- |
@@ -728,11 +702,7 @@ T_{total} = T_{LTSSM} + T_{TL} + T_{DLL} + T_{PHY}
 
 # 🔷 **1) System-Level Architecture (Big Picture)**
 
-![Image](https://upload.wikimedia.org/wikipedia/commons/1/1c/Example_PCI_Express_Topology.svg)
 
-![Image](https://www.researchgate.net/publication/330675762/figure/fig2/AS%3A720000537088011%401548672913974/PCIe-fabric-structure-of-multiple-flash-storage-connected-Jin-et-al-2018.ppm)
-
-![Image](https://www.researchgate.net/publication/289500717/figure/fig3/AS%3A667720332898306%401536208341399/PCIe-attached-CPUs-and-GPUs-implementing-ondemand-memory-migration-to-the-GPU.ppm)
 
 At the highest level, PCIe is a **point-to-point serial interconnect** between devices.
 
@@ -766,9 +736,6 @@ Each **lane** is a pair of differential wires:
 
 # 🔷 **2) PCIe Layered Architecture (Core Model)**
 
-![Image](https://www.researchgate.net/publication/351537177/figure/fig1/AS%3A1022841705209867%401620875874662/PCIe-bus-layers-architecture-established-between-a-host-and-a-target-device-In-this.ppm)
-
-![Image](https://www.oreilly.com/api/v2/epubs/urn%3Aorm%3Abook%3A0321156307/files/0321156307_ch02lev1sec5_image01.jpeg)
 
 PCIe is organized into **three main layers**:
 
@@ -800,9 +767,6 @@ This is where **Gen5 vs Gen6 mainly differ.**
 
 ## **B) Data Link Layer (DLL) — “reliable delivery”**
 
-![Image](https://www.oreilly.com/api/v2/epubs/urn%3Aorm%3Abook%3A0321156307/files/0321156307_ch05lev1sec5_image01.jpeg)
-
-![Image](https://media.licdn.com/dms/image/v2/D4D12AQFfa8CP7-al4A/article-inline_image-shrink_1500_2232/B4DZVk_jHpHkAY-/0/1741156136834?e=2147483647\&t=xcvOceiFECpLqbkmh9ugfqqtPzvMuQK9-W6nWUF0Tys\&v=beta)
 
 The DLL makes PCIe **reliable**, similar to TCP in networking.
 
@@ -833,9 +797,6 @@ This behavior is **identical in Gen5 and Gen6**.
 
 ## **C) Transaction Layer (TL) — “packets”**
 
-![Image](https://xillybus.com/media/tutorials/tlp-write3.png)
-
-![Image](https://media.licdn.com/dms/image/v2/D5622AQE0XvhuDQYE0Q/feedshare-shrink_800/B56ZdGcuzMH8Ag-/0/1749233627058?e=2147483647\&t=Sri4KbUawR94_GVZlT2GPPh6Pu6Nu6nazddvmiKBKbc\&v=beta)
 
 This layer sends **TLPs (Transaction Layer Packets)**:
 
@@ -858,9 +819,6 @@ GPU returns Cpl TLP with data
 
 # 🔷 **3) Link Bring-Up: LTSSM (Training & Status State Machine)**
 
-![Image](https://media.licdn.com/dms/image/v2/D5622AQE72KJLu3i8Fg/feedshare-shrink_800/B56ZcgCSIAGQAw-/0/1748589159795?e=2147483647\&t=E54D128mPY9FE5cfbCTDfZr82jibOUDiOaAcsZlswC4\&v=beta)
-
-![Image](https://www.oreilly.com/api/v2/epubs/urn%3Aorm%3Abook%3A0321156307/files/0321156307_ch14lev1sec5_image01.jpeg)
 
 Before any data moves, PCIe goes through **link training** using LTSSM.
 
@@ -880,9 +838,7 @@ If errors occur → enter **RECOVERY**, retrain the link.
 
 # 🔷 **4) Lane Architecture (x1, x4, x8, x16)**
 
-![Image](https://www.techpowerup.com/img/x5IOE9hplxgQwNWM.jpg)
 
-![Image](https://imgv2-2-f.scribdassets.com/img/document/733389549/original/35359a5d57/1?v=1)
 
 A PCIe link can have multiple lanes:
 
@@ -1019,12 +975,6 @@ I’ll map **real PCIe behavior → your RTL modules → your UVM modules** so y
 ---
 
 # **1) How PCIe Gen5/Gen6 Handles Data (End-to-End)**
-
-![Image](https://www.researchgate.net/publication/229597050/figure/fig5/AS%3A300662488354821%401448694931316/Data-flow-for-acquired-signals-Acquired-data-from-the-3-PCIe-channels-is-proxied-through.png)
-
-![Image](https://media.licdn.com/dms/image/v2/D4D12AQHss3aUe3-cdg/article-cover_image-shrink_423_752/B4DZVAx8RbGkAU-/0/1740548589199?e=2147483647\&t=709d5l-8P0Tb5hfp1P8h8_hnFPeLKZbrjrRZsG4v3xQ\&v=beta)
-
-![Image](https://www.synopsys.com/dw/dwtb/pcie_tb_axi/fig1.gif)
 
 ## **A. WRITE PATH (Memory Write – MWr)**
 
@@ -1306,12 +1256,6 @@ Below I’ve given you **both** (so you can pick whichever you need):
 ---
 
 # ✅ **2) Chip-Level Block Diagram (GPU / SSD using PCIe)**
-
-![Image](https://www.researchgate.net/publication/291554054/figure/fig4/AS%3A682307312689154%401539686148369/Functional-block-diagram-of-Wupper-the-PCIe-Engine.ppm)
-
-![Image](https://yqintl.alicdn.com/51b2a39e418253fb8b5b5f34e7cc7b204d959f25.png)
-
-![Image](https://www.researchgate.net/publication/228909244/figure/fig3/AS%3A393696324407296%401470875926450/Complete-PCIe-Endpoint-Device-BRAM-Block-Random-Access-Memory-LMB-Local-Memory-Bus.png)
 
 ## **A) GPU with PCIe (chip-level view)**
 
