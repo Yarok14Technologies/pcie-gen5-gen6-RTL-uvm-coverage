@@ -1413,5 +1413,144 @@ Below I’ve given you **both** (so you can pick whichever you need):
 
 ---
 
+# 🚀 PCIe Gen5/Gen6 RTL + UVM Coverage Project
+
+## 📌 System / Platform Architecture
+
+![Intel 13th Gen + Z790](Docs/A%20system-level%20platform%20diagram%20showing%20how%20the%2013th-Gen%20Intel%20CPU%20and%20Z790%20chipset%20share%20and%20route%20memory,%20PCIe,%20storage,%20USB,%20networking,%20and%20control%20IO%20in%20a%20modern%20desktop%20PC..webp)
+
+![AMD AM4 IO Consistency](Docs/AM4%20IO%20CONSISTENCY%20WITH%20PREMIUM%20CONNECTIVITY%202019.jpg)
+
+![ATCA IO Data Flow](Docs/ATCA%20IO%20Data%20Flow%20and%20Software%20Stack%20Integration%20(Control,%20Acquisition,%20and%20Real-Time%20Paths).png)
+
+![AMD Ryzen 3000 Platform Topology](Docs/Platform%20Architecture%20and%20High-Speed%20IO%20Topology%20of%20AMD%20Ryzen%203000%20(AM4)%20System.jpg)
+
+---
+
+## 📌 CPU–GPU / Memory / Bottlenecks
+
+![CPU–GPU Memory Hierarchy](Docs/CPU–GPU%20Memory%20Hierarchy%20and%20PCIe%20Bottleneck%20in%20Heterogeneous%20Computing.png)
+
+---
+
+## 📌 Signaling: NRZ vs PAM4 (Gen5 vs Gen6)
+
+![NRZ vs PAM4 Comparison](Docs/Comparison%20of%20NRZ%20modulation%20and%20PAM4%20modulation.png)
+
+![NRZ to PAM4 Conversion](Docs/Conversion%20of%20NRZ%20modulation%20and%20PAM4%20modulation.png)
+
+---
+
+## 📌 PCIe Core Architecture & Topology
+
+![PCIe System Architecture](Docs/PCI%20Express%20System%20Architecture.png)
+
+![PCIe System Architecture Alt](Docs/PCI%20Express%20System%20Architecture.jpeg)
+
+![PCIe Layered Architecture](Docs/PCI%20Express%20Layered%20Architecture%20and%20Bidirectional%20Link%20Communication.jpeg)
+
+![PCIe Root Complex–Switch–Endpoint](Docs/PCI%20Express%20Root%20Complex,%20Switch,%20and%20Endpoint%20Topology.gif)
+
+![Example PCIe Topology](Docs/Example%20PCI%20Express%20Topology.svg)
+
+![PCIe Links and Lanes](Docs/PICE%20Links%20and%20Lanes.webp)
+
+![PCIe x16 Connector Pinout](Docs/PCI%20Express%20x16%20Connector%20Pinout%20and%20Lane%20Assignment.webp)
+
+---
+
+## 📌 Transaction Layer (TLP)
+
+![PCIe TLP Encapsulation](Docs/PCI%20Express%20TLP%20(Transaction%20Layer%20Packet)%20Format%20and%20Layered%20Encapsulation.png)
+
+![Memory Write TLP Header](Docs/PCI%20Express%20Memory%20Write%20TLP%20(Transaction%20Layer%20Packet)%20Header%20Format.png)
+
+---
+
+## 📌 Data Link Layer (DLL) — ACK/NAK, Flow Control
+
+![DLL ACK/NAK Mechanism](Docs/PCI%20Express%20Data%20Link%20Layer%20Retry%20and%20Acknowledgment%20(ACKNAK)%20Mechanism.png)
+
+![DLL Flow Control & Sequencing](Docs/PCI%20Express%20Data%20Link%20Layer%20Flow%20Control,%20Sequencing,%20and%20Retry%20(ACKNAK)%20Mechanism.jpeg)
+
+![NACK-based Reliability](Docs/Negative%20Acknowledgment%20(NACK)-based%20reliability%20and%20management%20mode%20control%20for%20RDATA%20transmission.png)
+
+---
+
+## 📌 LTSSM (Link Training)
+
+![PCIe LTSSM](Docs/PCI%20Express%20Link%20Training%20and%20Status%20State%20Machine%20(LTSSM).jpeg)
+
+![PCIe LTSSM Alt](Docs/PCI%20Express%20Link%20Training%20and%20Status%20State%20Machine%20(LTSSM)%201.jpg)
+
+---
+
+## 📌 PCIe DMA & FPGA Data Path
+
+![PCIe DMA Timing](Docs/PCI%20Express%20DMA%20Transmission%20timing.png)
+
+![FPGA PCIe System](Docs/FPGA-based%20PCI%20Express%20System%20Architecture%20with%20Embedded%20Processor%20and%20On-Chip%20Bus.png)
+
+![FPGA BRAM + LMB](Docs/Complete%20PCIe%20Endpoint%20Device%20BRAM%20Block%20Random%20Access%20Memory%20LMB%20Local%20Memory%20Bus.png)
+
+![Wupper FPGA DMA Flow](Docs/how%20an%20FPGA%20module%20(Wupper)%20moves%20streaming%20data%20between%20external%20FIFOs%20and%20a%20PCIe%20host%20using%20DMA%20over%20AXI%20interfaces,%20with%20separate%20fast%20data%20paths%20and%20slow%20control%20paths..png)
+
+---
+
+## 📌 UVM Verification & Coverage
+
+![End-to-End Testbench 1](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%201.png)
+![End-to-End Testbench 2](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%202.png)
+![End-to-End Testbench 3](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%203.png)
+![End-to-End Testbench 4](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%204.png)
+![End-to-End Testbench 5](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%205.png)
+![End-to-End Testbench 6](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%206.png)
+![End-to-End Testbench 7](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%207.png)
+![End-to-End Testbench 8](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%208.png)
+![End-to-End Testbench 9](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%209.png)
+![End-to-End Testbench 10](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%2010.png)
+![End-to-End Testbench 11](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%2011.png)
+![End-to-End Testbench 12](Docs/End-to-End%20PCIe%20Gen5Gen6%20Verification%20and%20Testbench%20Architecture%2012.png)
+
+![UVM Dashboard 1](Docs/PCIE%20Verification%20Environment%20Dashboard%201.png)
+![UVM Dashboard 2](Docs/PCIE%20Verification%20Environment%20Dashboard%202.png)
+![UVM Dashboard 3](Docs/PCIE%20Verification%20Environment%20Dashboard%203.png)
+![UVM Dashboard 4](Docs/PCIE%20Verification%20Environment%20Dashboard%204.png)
+![UVM Dashboard 5](Docs/PCIE%20Verification%20Environment%20Dashboard%205.png)
+
+![UVM Stimulus → Checker Flow](Docs/how%20a%20PCIe%20Gen5Gen6%20endpoint%20(DUT)%20is%20stimulated,%20monitored,%20and%20validated%20using%20a%20UVM-based%20testbench%20that%20exercises%20all%20PCIe%20layers%20(TLP%20→%20DLL%20→%20LTSSM%20→%20PHY),%20collects%20coverage,%20checks%20correctness,%20and%20supports%20CICD.png)
+
+---
+
+## 📌 Storage / SSD / NVMe
+
+![SSD Frontend–Backend](Docs/SSD%20Frontend–Backend%20Architecture%20and%20Flash%20Translation%20Layer%20(FTL).png)
+
+![PCIe → NAND Backend](Docs/SSD%20System%20Architecture%20Frontend%20PCIe%20to%20Backend%20NAND%20Flash%20Translation.png)
+
+![PCIe Switch Fabric for SSD Fan-Out](Docs/PCIe%20Switch%20Fabric%20for%20Fan-Out%20to%20Many%20SSDs%20(High-Density%20NVMe%20Expansion).png)
+
+---
+
+## 📌 Networking / Packets
+
+![Network Packets](Docs/network-packets.png)
+
+---
+
+## 📌 Other References
+
+![T1/E1 Training Example](Docs/How%20a%20T1DS1%20system%20uses%20specific%20time%20slots,%20bit%20patterns,%20and%20control%20characters%20to%20establish,%20train,%20synchronize,%20and%20maintain%20a%20reliable%20digital%20link..jpeg)
+
+![Generic PCIe Block Diagram](Docs/pcie.svg)
+
+---
+
+## 📄 PDFs (Download Links)
+
+- [Docs Explanation](Docs/Docs%20Explaination.pdf)
+- [PCIe Gen5/6 RTL UVM Project](Docs/PCIE%205,%206%20RTL%20UVM%20Project.pdf)
+- [HBM + NVLink Simplified](Docs/HBM%20NVLink%20Simplified.pdf)
+- [Protocols](Docs/Protocols.pdf)
 
 
