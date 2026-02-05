@@ -1,4 +1,5 @@
 # **PCIe Gen5/Gen6 RTL + UVM + SVA/FV Verification Project**
+A layered, end-to-end PCIe Gen5/Gen6 verification framework where AXI traffic is converted to PCIe, exercised through all PCIe layers (TLP → DLL → LTSSM → PHY), and validated by a UVM testbench using scoreboards, assertions, coverage, debug dashboards, and automated CI/CD reporting.
 
 This repository contains an **end-to-end, industry-style PCIe Gen5/Gen6 Endpoint design and verification framework**, including RTL modeling, UVM-based verification, formal properties, transaction-level observability, coverage automation, and CI/CD regression.
 
